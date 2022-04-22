@@ -1,0 +1,259 @@
+<!-- 
+	Theme: Elephant-Mosquito
+	version: 1.0
+	author: Szalik
+
+	extra credit: lilbud
+-->
+<theme>
+	<formatVersion>4</formatVersion>
+
+	<view name="screen">
+		<text name="clock">
+			<fontSize>0.04</fontSize>
+			<pos>0.015009380863039 0.020</pos><!-- 8 8 -->
+			<color>ffffffbb</color>
+		</text>
+		
+		<!-- TODO -->
+		<batteryIndicator name="batteryIndicator">
+			<color>ffffffbb</color>
+			<itemSpacing>0</itemSpacing>
+			<pos>0.015009380863039 0.025</pos><!-- 8 8 -->
+			<size>0.969981238273921 0.046875</size><!-- 1862.36397748592832 54 - sized off of 1920x1152 to make the icon clear -->
+			<full>./assets/utility/battery-100-vertical.svg</full>
+			<at75>./assets/utility/battery-75-vertical.svg</at75>
+			<at50>./assets/utility/battery-50-vertical.svg</at50>
+			<at25>./assets/utility/battery-25-vertical.svg</at25>
+			<empty>./assets/utility/battery-0-vertical.svg</empty>
+			<incharge>./assets/utility/battery-charging-vertical.svg</incharge>
+			<networkIcon>./assets/utility/wifi-vertical.svg</networkIcon>
+		</batteryIndicator>
+		
+		<controllerActivity name="controllerActivity">
+			<visible>false</visible>
+		</controllerActivity>
+	</view>
+
+	<view name="system">
+		<helpsystem name="help">
+			<visible>false</visible>
+			<pos>1 1</pos>
+		</helpsystem>
+
+		<image name="screen-background" extra="true">
+			<origin>1 0</origin>
+			<pos>1 0</pos>
+			<size>1 0.09375</size>
+			<path>./assets/arts/space.png</path>
+			<tile>true</tile>
+			<zIndex>4</zIndex>
+		</image>
+
+		<image name="background" extra="true">
+			<size>1 1</size>
+			<pos>0 0</pos>
+			<origin>0 0</origin>
+			<path>./assets/arts/bg.png</path>
+			<zIndex>0</zIndex>
+			<!--<color>000000</color>-->
+		</image>
+		
+		<image name="logo">
+			<path>./assets/logos/${system.theme}.svg</path>
+			<color>000000</color>
+		</image>
+		
+		<text name="logoText">
+			<fontPath>./assets/fonts/jura.ttf</fontPath>
+		</text>
+	</view>
+	
+	<view name="basic">
+		
+		<text name="description" extra="true">
+			<pos>0.061 0.624</pos>
+			<size>0.236 0.200</size>
+			<color>ffffff</color>
+			<fontSize>0.025</fontSize>
+			<text>No Information Available</text>
+			<fontPath>./assets/fonts/noto.ttf</fontPath>
+		</text>	
+		
+		<image name="none" extra="true">
+			<origin>0.5 0.5</origin>
+			<pos>0.1785 0.382</pos>
+			<maxSize>0.236 0.418</maxSize>
+			<path>./assets/arts/no_boxart.png</path>
+		</image> 
+	
+	</view>
+	
+	<view name="basic, detailed, video">
+		<image name="screen-background" extra="true">
+			<origin>1 0</origin>
+			<pos>1 0</pos>
+			<size>1 0.09375</size>
+			<path>./assets/arts/space.png</path>
+			<tile>true</tile>
+			<zIndex>4</zIndex>
+		</image>
+	
+		<helpsystem name="help">
+			<visible>false</visible>
+			<pos>1 1</pos>
+		</helpsystem>
+		
+		
+		<image name="background" extra="true">
+			<size>1 1</size>
+			<pos>0 0</pos>
+			<origin>0 0</origin>
+			<path>./assets/arts/bg.png</path>
+			<zIndex>0</zIndex>
+			<!--<color>10667f</color>-->
+		</image>
+		
+		<image name="layout" extra="true">
+			<path>./assets/arts/gamelist.png</path>
+			<pos>0 0</pos>
+			<zIndex>2</zIndex>
+			<size>1 1</size>
+			<origin>0 0</origin>
+		</image>
+		
+		<text name="system_name" extra="true">
+			<text>${system.fullName}</text>
+			<forceUppercase>0</forceUppercase>
+			<size>0.5 0.025</size>
+			<pos>0.4 0.032</pos>
+			<color>ffffff</color>
+			<fontPath>./assets/fonts/Drimolen.otf</fontPath>
+			<fontSize>0.04</fontSize>
+			<zIndex>2</zIndex>
+		</text>
+		
+		<text name="md_lbl_genre, md_genre, md_lbl_rating, md_lbl_developer, md_lbl_publisher, md_publisher, md_lbl_lastplayed, md_lbl_playcount, md_playcount, md_lbl_releasedate">
+			<pos>1 1</pos>
+		</text>
+		
+		<rating name="md_rating">
+			<pos>1 1</pos>
+			<size>0 0</size>
+		</rating>
+		
+		<textlist name="gamelist">
+			<selectorColor>bc5000</selectorColor>
+			<selectedColor>ffffff</selectedColor>
+			<primaryColor>ffffff</primaryColor>
+			<secondaryColor>ffffff</secondaryColor>
+			<fontPath>./assets/fonts/SST.ttf</fontPath>
+			<fontSize>0.03</fontSize>
+			<pos>0.307 0.170</pos>
+			<size>0.635 0.68</size>
+			<alignment>left</alignment>
+			<horizontalMargin>0.01</horizontalMargin>
+			<origin>0 0</origin>
+			<lineSpacing>2.27</lineSpacing>
+			<selectorImagePath>./assets/arts/box.png</selectorImagePath>
+			<selectorOffsetY>-0.01</selectorOffsetY>
+			<selectorHeight>0.0675</selectorHeight>
+		</textlist> 
+		
+		<image name="md_image">
+			<visible>false</visible>
+			<origin>0.5 0.5</origin>
+			<pos>0.1785 0.382</pos>
+			<maxSize>0.236 0.418</maxSize>
+		</image> 
+		
+		<text name="md_description">
+			<pos>0.061 0.624</pos>
+			<size>0.236 0.200</size>
+			<color>ffffff</color>
+			<fontSize>0.025</fontSize>
+			<fontPath>./assets/fonts/noto.ttf</fontPath>
+		</text>
+		
+		<image name="logo">
+			<pos>1 1</pos>
+			<color>00000000</color>
+			<path>./assets/arts/box.png</path>
+		</image>
+	
+	</view>
+	
+	<view name="video">
+
+			<video name="md_video">
+				<origin>0.5 0.5</origin>
+				<pos>0.1785 0.382</pos>
+				<maxSize>0.236 0.418</maxSize>	
+				<delay>0</delay>
+				<default></default>
+				<showSnapshotNoVideo>true</showSnapshotNoVideo>
+				<showSnapshotDelay>false</showSnapshotDelay>
+			</video>
+
+			<!--<image name="md_marquee">
+				<pos>0.45 0.626</pos>
+				<origin>0 0</origin>
+				<maxSize>0.39 0.23</maxSize>
+			</image>-->
+			
+	</view>		
+	
+	<feature supported="carousel">
+      
+	  <view name="system">
+         
+		<carousel name="systemcarousel">
+		    <type>horizontal</type>
+		    <color>00000000</color>
+		    <logoScale>0.7</logoScale>
+		    <logoSize>0.40 0.3</logoSize>
+			<defaultTransition>instant</defaultTransition>
+         </carousel>
+		    
+		<text name="systemInfo">
+		    <backgroundColor>00000000</backgroundColor>
+		    <color>ffffff</color>
+		    <fontPath>./assets/fonts/Drimolen.otf</fontPath>
+		    <fontSize>0.075</fontSize>    
+			<color>000000</color>			
+		</text>
+	  
+	</view>
+	
+	</feature>
+	
+	<view name="menu">
+		<menuText name="menutitle">
+			<fontSize>0.034375</fontSize>
+			<color>FFBF00</color>
+		</menuText>
+		<menuText name="menufooter">
+			<fontSize>0.0325</fontSize>
+			<color>666666</color>
+		</menuText>
+		<menuText name="menutext">
+			<fontSize>0.036</fontSize>
+			<color>444444</color>
+			<separatorColor>222222</separatorColor>
+			<selectorColor>555555</selectorColor>
+			<selectedColor>ffffff</selectedColor>
+		</menuText>
+		<menuTextSmall name="menutextsmall">
+			<fontSize>0.03</fontSize>
+			<color>d53600</color>
+		</menuTextSmall>
+		<menuBackground name="menubg">
+			<color>111111</color>
+			<cornerSize>20 20</cornerSize>
+		</menuBackground>
+	</view>
+	
+</theme>
+		
+		
+		
